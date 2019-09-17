@@ -3,34 +3,36 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SearchWords {
     static final int SIZE = 26;
+    static List<String> res = new ArrayList<>();
 
     // Design a trie node
     static class TrieNode {
-        TrieNode[] Child = new TrieNode[SIZE];java
+        TrieNode[] Child = new TrieNode[SIZE];
 
         // isLeaf is true if the node represents
         // end of a word
-        boolean leaf;
+        boolean isWord;
 
         // Constructor
         public TrieNode() {
-            leaf = false;
+            isWord = false;
             for (int i =0 ; i< SIZE ; i++)
                 Child[i] = null;
         }
     }
-//    TrieNode root = new TrieNode();
 
     static void insert(TrieNode root, String Key) {
         int n = Key.length();
         TrieNode pChild = root;
 
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
 
             if(Key.charAt(i) >= 'a' && Key.charAt(i) <= 'z') {
                 int index = Key.charAt(i) - 'a';
@@ -42,15 +44,18 @@ public class SearchWords {
             }
 
         }
-
         // make last node as leaf node
-        pChild.leaf = true;
+        pChild.isWord = true;
     }
 
     static void searchWord(TrieNode root, Map<Integer, Boolean> map, String str) {
         // if we found word in trie / dictionary
-        if (root.leaf)
-            System.out.println(str);
+
+
+        if (root.isWord) {
+            res.add(str);
+//            System.out.println(str);
+        }
 
         // traverse all child's of current root
         for (int K =0; K < SIZE; K++) {
@@ -66,7 +71,7 @@ public class SearchWords {
         }
     }
 
-    static void PrintAllWords(char Arr[], TrieNode root, int n) {
+    static void SearchAllWords(char Arr[], TrieNode root, int n) {
         // create a 'has' array that will store all
         // present character in Arr[]
        // boolean[] Hash = new boolean[SIZE];
@@ -76,7 +81,6 @@ public class SearchWords {
         for (int i = 0 ; i < n; i++) {
             map.put(Arr[i] - 'a', true);
         }
-           // Hash[Arr[i] - 'a'] = true;
 
         // tempary node
         TrieNode pChild = root ;
@@ -113,12 +117,14 @@ public class SearchWords {
             //System.out.println(inputLine);
             count++;
         }
-
         in.close();
 
         char arr[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'} ;
         int N = arr.length;
 
-        PrintAllWords(arr, root, N);
+        SearchAllWords(arr, root, N);
+        for(int i = 0; i < res.size(); i++){
+            System.out.println(res.get(i));
+        }
     }
 }
