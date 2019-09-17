@@ -8,10 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-This project should be run by Java version greater than Java 8. So you need to have a java 11 to run this project.
+This project should be run by Java version greater than Java 8. So you need to have a java 8 at least to run this project.
 
 ```
-This is my version:
+This is my Java version:
 1. java version "1.8.0_221"
 2. Java(TM) SE Runtime Environment (build 1.8.0_221-b11)
 3. Java HotSpot(TM) 64-Bit Server VM (build 25.221-b11, mixed mode)
@@ -21,7 +21,7 @@ This is my version:
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Say what the step will be: 
 
 ```
 git clone https://github.com/Shan6633/Word-Anagram.git
