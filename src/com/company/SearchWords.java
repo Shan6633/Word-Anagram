@@ -119,7 +119,7 @@ public class SearchWords {
         }
         in.close();
 
-        char arr[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'} ;
+        char arr[] = {'a', 'b','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k','m'} ;
         int N = arr.length;
 
         SearchAllWords(arr, root, N);
