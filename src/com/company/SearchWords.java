@@ -11,7 +11,7 @@ public class SearchWords {
 
     // Design a trie node
     static class TrieNode {
-        TrieNode[] Child = new TrieNode[SIZE];
+        TrieNode[] Child = new TrieNode[SIZE];java
 
         // isLeaf is true if the node represents
         // end of a word

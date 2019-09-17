@@ -8,15 +8,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Since this project is run by Java 11. So you need to have a java 11 to run this project.
+This project should be run by Java version greater than Java 8. So you need to have a java 11 to run this project.
 
 ```
-1.java version "11.0.2" 2019-01-15 LTS
-2. Java(TM) SE Runtime Environment 18.9 (build 11.0.2+9-LTS)
-3. Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.2+9-LTS, mixed mode)
+This is my version:
+1. java version "1.8.0_221"
+2. Java(TM) SE Runtime Environment (build 1.8.0_221-b11)
+3. Java HotSpot(TM) 64-Bit Server VM (build 25.221-b11, mixed mode)
 ```
 
-### Installing
+### Testing
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -25,7 +26,6 @@ Say what the step will be
 ```
 git clone https://github.com/Shan6633/Word-Anagram.git
 cd  Word-Anagram && ./runme.sh
-
 ```
 
 ## Test Case
