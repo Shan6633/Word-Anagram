@@ -98,10 +98,7 @@ public class SearchWords {
             }
         }
     }
-//    public void read() throws Exception {
-//
-//
-//    }
+
 
     public static void main(String[] args) throws Exception{
         TrieNode root = new TrieNode();
