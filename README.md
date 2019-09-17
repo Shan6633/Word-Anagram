@@ -32,11 +32,8 @@ cd  Word-Anagram && ./runme.sh
 
 For this project I use words on https://raw.githubusercontent.com/lad/words/master/words as my dictionary. And a char array char arr[] = {'a', 'b','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k','m'}  as the input characters. You can change this char array within range from 'a' to 'z' in the main function in SearchWord.java
 
+## Basic Idea
 
-
-## Deployment
-
-If you do not want to change you Java version. You can still 
-
+For this question, since the dictionary can have a large amount of data. So it will be both time and space consuming by just storing all data in to a Set and check character one by one. So I decided to build a Trie tree to store the dictionary.
 
 
